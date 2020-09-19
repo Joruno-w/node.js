@@ -1,52 +1,67 @@
-const fs = require('fs');
+const http = require('http');
 const path = require('path');
-const net = require('net');
-const socket = net.createConnection({
-    host: 'duyi.ke.qq.com',
-    port: 80
-},()=>{
-    console.log('连接成功!');
+const fs = require('fs');
+const URL = require('url');
+
+const request = http.request('http://duyi.ke.qq.com',{method: "GET"},res => {
+    console.log(res.headers);
+    console.log(res.url);
+    let result = '';
+    res.on("data", chunk => {
+        result += chunk.toString('utf-8');
+    });
+    res.on("end", ()=>{
+        console.log(result);
+    });
 });
-socket.write(`GET / HTTP/1.1
-Host: duyi.ke.qq.com
-Connection: keep-alive
+request.end();
 
-`);
-socket.on('data',chunk=>{
-    console.log(chunk.toString("utf-8"));
-});
+async function exists(filename){
+    try {
+        return await fs.promises.stat(filename);
+    }catch (e) {
+        return null;
+    }
+}
 
+async function getFileContent(url){
+    const urlObj = URL.parse(url);
+    let filename = path.resolve(__dirname,'public',urlObj.pathname.substring(1));
+    let stat = await exists(filename);
+    if (!stat){
+        //没有这个文件
+        return null;
+    }else if (stat.isDirectory()){
+        //是一个目录
+        filename = path.resolve(__dirname,'public',urlObj.pathname.substring(1),'index.html');
+        stat = await exists(filename);
+        if (!stat){
+            return null;
+        }else{
+            return await fs.promises.readFile(filename);
+        }
+    }else {
+        //有这个文件
+        return await fs.promises.readFile(filename);
+    }
+}
 
+async function handler(req,res) {
+    const content = await getFileContent(req.url);
+    if (content){
+        res.write(content);
+    }else{
+        res.statusCode = 404;
+        res.write('Resource is not exist');
+    }
+    res.end();
+}
+const server = http.createServer(handler);
 
-const server = net.createServer();
-server.listen(9527);
+server.listen(12306);
 server.on("listening", ()=>{
-    console.log('server listen 9527');
-});
-
-server.on("connection", socket => {
-    console.log('有客户端连接到服务器')
-    socket.on('data',async ()=>{
-        const filename = path.resolve(__dirname,'./1.jpg');
-        const bodyBuffer = await fs.promises.readFile(filename);
-        const headerBuffer = Buffer.from(`HTTP/1.1 200 OK
-Content-Type: image/jpeg
-
-`,'utf-8');
-        const result = Buffer.concat([headerBuffer,bodyBuffer]);
-        socket.write(result);
-        socket.end();
-    });
-    socket.on('end',()=>{
-        console.log('连接关闭');
-    });
-});
-
-
-
-
-
-
+    console.log('server listening!');
+})
 
 
 
