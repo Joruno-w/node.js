@@ -1,0 +1,24 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "node.js学习笔记，每个分支上的xmind文件是笔记汇总，其他的均为练习代码",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangshengliang-ai/node.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangshengliang-ai/node.js/issues"
+  },
+  "homepage": "https://github.com/wangshengliang-ai/node.js#readme",
+  "dependencies": {
+    "mysql2": "^2.2.3",
+    "sequelize": "^6.3.5"
+  }
+}
