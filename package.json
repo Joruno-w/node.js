@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/wangshengliang-ai/node.js#readme",
   "dependencies": {
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.3",
     "mockjs": "^1.1.0",
     "mysql2": "^2.2.3",
     "sequelize": "^6.3.5"

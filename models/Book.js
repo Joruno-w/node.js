@@ -9,7 +9,7 @@ const Book = sequelize.define('Book', {
         type: DataTypes.STRING
     },
     publishDate: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false
     },
     author: {
