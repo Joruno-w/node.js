@@ -4,7 +4,8 @@
   "description": "node.js学习笔记，每个分支上的xmind文件是笔记汇总，其他的均为练习代码",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -x npm run server",
+    "server": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
     "md5": "^2.3.0",
     "mockjs": "^1.1.0",
     "mysql2": "^2.2.3",
