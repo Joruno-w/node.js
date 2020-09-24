@@ -1,20 +1,22 @@
 const express = require('express');
+const path = require('path');
+const filename = path.resolve(__dirname,'./public');
 const app = express();
 const port = 5008;
 app.listen(port, () => {
     console.log(`正在监听${port}`);
 });
+app.use(express.static(filename));
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.json());
+app.use(require('./routes/errorMiddleware'));
 
-app.use(require('./routes/staticMiddleware'));
-
-app.get("/news", (req, res, next) => {
-    console.log('handler1');
-    next(new Error("abc"));
-}, (err,req,res,next)=>{
-    console.log('handler2');
-    next();
+app.post('/api/student',(req,res)=>{
+    console.log(req.body);
 });
-app.use('/news',require('./routes/errorMiddleware'));
+
 
 
 
