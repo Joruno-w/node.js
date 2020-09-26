@@ -53,6 +53,17 @@ exports.getStudentByPage = async function (page=1,limit=10,sex=-1,name) {
         total: result.count,
         datas: JSON.parse(JSON.stringify(result.rows))
     }
+}
 
+exports.getStudentById = function (id) {
+    const result = await Student.findByPk({
+        where: {
+            id
+        }
+    });
+    if (result){
+        return result.toJSON();
+    }
+    return null;
 }
 
