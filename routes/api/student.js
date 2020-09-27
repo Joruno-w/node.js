@@ -2,10 +2,12 @@ const express = require('express');
 const {getResult,asyncHandler} = require('./getResult');
 const router = express.Router();
 const stuServe = require('../../services/studentService');
-router.get('/',asyncHandler(async (req,res)=>{ // 分页获取学生
-    const {page,limit,sex,name} = req.query;
-    return await stuServe.getStudentByPage(page,limit,sex,name);
-}));
+router.get('/',async (req,res)=>{ // 分页获取学生
+    const result = await stuServe.getAllStudents();
+    const json = JSON.stringify(result);
+    const script = `callback(${json})`;
+    res.header("content-type",'application/javascript').send(script);
+});
 
 router.get('/:id',asyncHandler(async (req,res)=>{
     return await stuServe.getStudentById(req.params.id);

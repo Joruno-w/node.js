@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const filename = path.resolve(__dirname,'./public');
 const app = express();
 const port = 5008;
+
 app.listen(port, () => {
     console.log(`正在监听${port}`);
 });
@@ -21,6 +22,7 @@ app.use(require('./routes/errorMiddleware'));
 app.post('/api/student',(req,res)=>{
     console.log(req.body);
 });
+
 
 
 

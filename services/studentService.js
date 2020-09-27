@@ -32,7 +32,7 @@ exports.getAllStudents = async function () {
     return JSON.stringify(result);
 }
 
-exports.getStudentByPage = async function (page=1,limit=10,sex=-1,name) {
+exports.getStudentByPage = async function (page=1,limit=10,sex=-1,name='') {
     const where = {}
     if (sex!==-1){
         where.sex = !!sex;
@@ -55,12 +55,8 @@ exports.getStudentByPage = async function (page=1,limit=10,sex=-1,name) {
     }
 }
 
-exports.getStudentById = function (id) {
-    const result = await Student.findByPk({
-        where: {
-            id
-        }
-    });
+exports.getStudentById = async function (id) {
+    const result = await Student.findByPk(id);
     if (result){
         return result.toJSON();
     }
