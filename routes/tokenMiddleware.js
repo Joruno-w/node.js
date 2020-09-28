@@ -1,7 +1,6 @@
 const {getErr} = require('./api/getResult');
 const {pathToRegexp} = require('path-to-regexp');
 const needToToken = [
-    {method: 'GET',path: '/api/student'},
     {method: 'POST',path: '/api/student'},
     {method: 'PUT',path: '/api/student:id'}
 ];
