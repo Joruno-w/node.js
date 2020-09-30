@@ -1,18 +1,26 @@
-//简单请求
-// fetch(`http://localhost:5008/api/student`).then(res => res.json()).then(res => {
-//     console.log(JSON.parse(res.data));
-// });
+const login = document.getElementById('login');
+login.onclick = function () {
+    fetch(`/api/admin/login`,{
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            loginId: 'mrtq',
+            loginPwd: '123123'
+        })
+    }).then(res=>res.json()).then(res=>console.log(res));
+}
 
-
-//需要域检的请求
-
-fetch(`http://localhost:5008/api/student`,{
-    method: 'POST',
-    headers:{
-        "content-type": 'application/json',
-        a: 1,
-    },
-    credentials: "include"
-}).then(res=>res.json()).then(res=>{
-    console.log(res);
-});
+const update = document.getElementById('update');
+update.onclick = function () {
+    fetch(`/api/student/1`,{
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: '夏涛'
+        })
+    }).then(res=>res.json()).then(res=>console.log(res));
+}

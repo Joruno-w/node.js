@@ -2,7 +2,8 @@ const {getErr} = require('./api/getResult');
 const {pathToRegexp} = require('path-to-regexp');
 const needToToken = [
     {method: 'POST',path: '/api/student'},
-    {method: 'PUT',path: '/api/student:id'}
+    {method: 'GET',path: '/api/student'},
+    {method: 'PUT',path: '/api/student/:id'}
 ];
 module.exports = (req,res,next)=>{
     const apis = needToToken.filter(api=>{
@@ -13,15 +14,11 @@ module.exports = (req,res,next)=>{
         next();
         return;
     }
-    let token = req.cookies.token;
-    if (!token){
-        token = req.headers.authorization;
-    }
-    if (!token){
+    if (req.session.loginUser) {
+        next();
+    }else{
         handleNoToken(req,res,next);
-        return;
     }
-    next();
 }
 
 function handleNoToken(req,res,next){
