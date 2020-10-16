@@ -27,6 +27,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
+app.use(require('./routes/apiLoggerMid'));
 app.use('/api/student', require('./routes/api/student'));
 app.use('/api/admin', require('./routes/api/admin'));
 app.use(require('./routes/errorMiddleware'));
