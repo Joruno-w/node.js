@@ -5,12 +5,15 @@ async function getBooksHTML() {
     return await axios.get(`https://book.douban.com/latest`).then(r=>r.data);
 }
 
+
 async function getBooksLinks() {
      const html = await getBooksHTML();
      const $ = cheerio.load(html);
      const anchorElements = $('#content .grid-12-12 li a.cover');
      return Array.from(anchorElements).map((ele,i)=>$(ele).attr('href'));
 }
+
+
 async function getBookInfo(detailUrl) {
     const html = await axios.get(detailUrl).then(r=>r.data);
     const $ = cheerio.load(html);
@@ -26,7 +29,6 @@ async function getBookInfo(detailUrl) {
         author
     }
 }
-
 
 
 async function fetchAll() {
@@ -45,5 +47,4 @@ async function saveToDB() {
 }
 
 saveToDB();
-
 

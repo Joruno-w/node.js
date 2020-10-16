@@ -43,7 +43,7 @@ exports.getStudentByPage = async function (page=1,limit=10,sex=-1,name='') {
         }
     }
     const result = await Student.findAndCountAll({
-        attributes: ['id','name','sex','birthday'],
+        attributes: ['id','name','sex','birthday','age'],
         where,
         include: [Class],
         offset: (page - 1) * limit,

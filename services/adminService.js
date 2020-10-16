@@ -41,11 +41,7 @@ exports.login = async function (loginId,loginPwd) {
 
 
 exports.getAdminById = async function (id) {
-    const result = await Admin.findByPk({
-        where: {
-            id
-        }
-    });
+    const result = await Admin.findByPk(id);
     if (result){
         return result.toJSON();
     }

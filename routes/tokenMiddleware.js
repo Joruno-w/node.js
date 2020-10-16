@@ -1,9 +1,11 @@
 const {getErr} = require('./api/getResult');
 const {pathToRegexp} = require('path-to-regexp');
+const jwt = require('./jwt');
 const needToToken = [
     {method: 'POST',path: '/api/student'},
     {method: 'GET',path: '/api/student'},
-    {method: 'PUT',path: '/api/student/:id'}
+    {method: 'PUT',path: '/api/student/:id'},
+    {method: 'GET',path: '/api/admin/whoami'}
 ];
 module.exports = (req,res,next)=>{
     const apis = needToToken.filter(api=>{
@@ -14,10 +16,12 @@ module.exports = (req,res,next)=>{
         next();
         return;
     }
-    if (req.session.loginUser) {
+    const result = jwt.verify(req);
+    if (result){
+        req.userId = result.id;
         next();
     }else{
-        handleNoToken(req,res,next);
+        handleNoToken(req,res,next)
     }
 }
 
