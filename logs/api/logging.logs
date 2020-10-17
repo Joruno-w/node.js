@@ -38,3 +38,7 @@ api [2020-10-17 15:05:35] [ERROR]: ::1 - - "POST /api/upload HTTP/1.1" 404 150 "
 
 api [2020-10-17 15:07:12] [INFO]: ::1 - - "POST /api/upload HTTP/1.1" 200 55 "http://localhost:5008/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
 
+api [2020-10-17 15:41:17] [ERROR]: ::1 - - "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:5008/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 15:45:32] [ERROR]: ::1 - - "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:5008/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
