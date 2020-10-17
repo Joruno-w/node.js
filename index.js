@@ -9,8 +9,9 @@ const port = 5008;
 app.listen(port, () => {
     console.log(`正在监听${port}`);
 });
-app.use(require('./routes/proxyMid'));
 app.use(require('./routes/imgProtectMid'));
+app.set('views', path.resolve(__dirname,'./routes/views'));
+app.use(require('./routes/controller/student'));
 app.use(cors({
     origin(origin, callback) {
         if (!origin) {

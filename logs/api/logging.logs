@@ -52,3 +52,5 @@ api [2020-10-17 20:19:18] [ERROR]: ::1 - - "GET /data/api/local HTTP/1.1" 404 15
 
 api [2020-10-17 20:22:25] [ERROR]: ::1 - - "GET /data/api/local HTTP/1.1" 404 153 "" "PostmanRuntime/7.26.5"
 
+api [2020-10-17 21:28:58] [ERROR]: ::1 - - "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:5008/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
