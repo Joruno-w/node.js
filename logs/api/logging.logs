@@ -1,0 +1,20 @@
+api [2020-10-17 11:21:07] [ERROR]: ::1 - - "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:5008/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:21:17] [ERROR]: ::1 - - "GET /download.htm HTTP/1.1" 404 151 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:21:22] [ERROR]: ::1 - - "GET /res/1.jpg HTTP/1.1" 500 116 "http://localhost:5008/download.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:22:55] [INFO]: ::1 - - "GET /res/1.jpg HTTP/1.1" 200 1370348 "http://localhost:5008/download.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:24:02] [ERROR]: ::1 - - "GET /download.html/res/1.jpg HTTP/1.1" 404 162 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:24:33] [WARN]: ::1 - - "GET /res/1.jpg HTTP/1.1" 304 - "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:25:21] [ERROR]: ::1 - - "GET /download.html/res/1.jpg HTTP/1.1" 404 162 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:34:11] [WARN]: ::1 - - "GET /res/1.jpg HTTP/1.1" 304 - "http://localhost:5008/download.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:34:43] [WARN]: ::1 - - "GET /res/1.jpg HTTP/1.1" 304 - "http://localhost:5008/download.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+
+api [2020-10-17 11:36:00] [INFO]: ::1 - - "GET /res/1.jpg HTTP/1.1" 200 1370348 "http://localhost:5008/download.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+

@@ -8,6 +8,37 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>你好啊！</h1>
+    <p>
+        <input type="text" name="a">
+    </p>
+    <p>
+        <input type="file" name="img" multiple>
+    </p>
+    <p>
+        <button>提交</button>
+    </p>
+    <img src="" alt="">
+    <script>
+        function upload() {
+            const input1 = document.getElementsByTagName("input")[0];
+            const input2 = document.getElementsByTagName("input")[1];
+            const formData = new FormData();
+            formData.append('a', input1.value);
+            for (const file of input2.files) {
+                formData.append("img",file,file.name);
+            }
+            fetch("/api/upload",{
+                body: formData,
+                method: 'POST',
+            }).then(res=>res.json()).then(res=>{
+                const img = new Image();
+                img.src = res.data;
+                img.onload = function () {
+                    document.body.appendChild(img);
+                }
+            });
+        }
+        document.getElementsByTagName('button')[0].onclick = upload;
+    </script>
 </body>
 </html>
