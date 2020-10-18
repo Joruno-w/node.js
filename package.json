@@ -38,6 +38,7 @@
     "path-to-regexp": "^6.1.0",
     "qrcode": "^1.4.4",
     "query-string": "^6.13.2",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "svg-captcha": "^1.4.0"
   }
 }

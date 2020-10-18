@@ -1,0 +1,28 @@
+sql [2020-10-18 11:00:56] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:01:02] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:01:08] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:01:14] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:02:01] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:02:01] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:02:33] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:02:33] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:02:57] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:02:58] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = 'mrtq' AND `Admin`.`loginPwd` = '123123')) LIMIT 1;
+
+sql [2020-10-18 11:03:14] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = '' AND `Admin`.`loginPwd` = '')) LIMIT 1;
+
+sql [2020-10-18 11:05:22] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = '' AND `Admin`.`loginPwd` = '')) LIMIT 1;
+
+sql [2020-10-18 11:05:25] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = '' AND `Admin`.`loginPwd` = '')) LIMIT 1;
+
+sql [2020-10-18 11:05:55] [INFO]: Executing (default): SELECT `id`, `loginId`, `loginPwd`, `name`, `deletedAt` FROM `Admin` AS `Admin` WHERE (`Admin`.`deletedAt` IS NULL AND (`Admin`.`loginId` = '' AND `Admin`.`loginPwd` = '')) LIMIT 1;
+
