@@ -8,6 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="./img/water.jpg" alt="">
+    <div id="divcvs"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        var qrcode = new QRCode(document.getElementById("divcvs"), {
+            text: "http://ke.qq.com",
+            width: 128,
+            height: 128,
+            colorDark : "blue",
+            colorLight : "#fff",
+            correctLevel : QRCode.CorrectLevel.H,
+        });
+    </script>
 </body>
 </html>
