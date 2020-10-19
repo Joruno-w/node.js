@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
@@ -9,8 +10,10 @@ const port = 5008;
 app.listen(port, () => {
     console.log(`正在监听${port}`);
 });
-app.use(require('express-session')({
-    secret: 'wangshengliang'
+app.use(session({
+    secret: 'wangshengliang',
+    resave: true,
+    saveUninitialized: false,
 }));
 app.use(require('./routes/captchaMid'));
 app.use(require('./routes/imgProtectMid'));

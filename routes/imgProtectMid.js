@@ -1,5 +1,6 @@
 const path = require('path');
 const url = require('url');
+
 module.exports = (req,res,next)=>{
     const host = req.headers.host;
     let referer = req.headers.referer;
